@@ -71,13 +71,39 @@ function getWeatherData(city) {
             }
 
             // Display 5-day forecast data
-            displayForecastData(forecastData);
+            displayForecastData(forecastData); 
         })
         .catch(function (error) {
             // Display error message if API call fails
             alert("Error: " + error);
         });
 }
+
+function displayForecastData(forecastData) {
+    // Loop through forecast data and update HTML
+    for (var i = 0; i < forecastData.length; i++) {
+        var forecastCard = document.querySelector("#forecast-card-" + i);
+        forecastCard.querySelector(".card-date").textContent = forecastData[i].date;
+        forecastCard.querySelector(".card-icon").setAttribute("src", forecastData[i].icon);
+        forecastCard.querySelector(".card-temp").textContent = "Temp: " + forecastData[i].temp + " °F";
+        forecastCard.querySelector(".card-humidity").textContent = "Humidity: " + forecastData[i].humidity + "%";
+        forecastCard.querySelector(".card-wind-speed").textContent = "Wind Speed: " + forecastData[i].wind + " MPH";
+    }
+}
+
+ // Function to update search history
+ function updateSearchHistory() {
+    // Clear existing search history
+    document.querySelector("#search-history").innerHTML = "";
+
+    // Loop through search history and create list items
+    for (var i = 0; i < searchHistory.length; i++) {
+        var liEl = document.createElement("li");
+        liEl.textContent = searchHistory[i];
+        document.querySelector("#search-history").appendChild(liEl);
+    }
+}
+
 
 // Function to display current weather data
 function displayCurrentWeather(currentWeather) {
@@ -87,31 +113,6 @@ function displayCurrentWeather(currentWeather) {
     document.querySelector("#temperature").textContent = "Temperature: " + currentWeather.temp + " °F";
     document.querySelector("#humidity").textContent = "Humidity: " + currentWeather.humidity + "%";
     document.querySelector("#wind-speed").textContent = "Wind Speed: " + currentWeather.wind + "%";
-    // Function to display 5-day forecast data
-    function displayForecastData(forecastData) {
-        // Loop through forecast data and update HTML
-        for (var i = 0; i < forecastData.length; i++) {
-            var forecastCard = document.querySelector("#forecast-card-" + i);
-            forecastCard.querySelector(".card-date").textContent = forecastData[i].date;
-            forecastCard.querySelector(".card-icon").setAttribute("src", forecastData[i].icon);
-            forecastCard.querySelector(".card-temp").textContent = "Temp: " + forecastData[i].temp + " °F";
-            forecastCard.querySelector(".card-humidity").textContent = "Humidity: " + forecastData[i].humidity + "%";
-            forecastCard.querySelector(".card-wind-speed").textContent = "Wind Speed: " + forecastData[i].wind + " MPH";
-        }
-    }
-
-    // Function to update search history
-    function updateSearchHistory() {
-        // Clear existing search history
-        document.querySelector("#search-history").innerHTML = "";
-
-        // Loop through search history and create list items
-        for (var i = 0; i < searchHistory.length; i++) {
-            var liEl = document.createElement("li");
-            liEl.textContent = searchHistory[i];
-            document.querySelector("#search-history").appendChild(liEl);
-        }
-    }
 
     // Initialize search history
     updateSearchHistory();

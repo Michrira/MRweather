@@ -6,23 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <h1>Weather Dashboard</h1>
-        <form>
-            <div class="form-group">
-                <label for="city-input">Enter a City:</label>
-                <input type="text" class="form-control" id="city-input" />
+    </header>
+    <main>
+        <section>
+            <form>
+                <label for="city-input">Enter a city name:</label>
+                <input type="text" id="city-input" />
+                <button type="button" id="search-button">Search</button>
+            </form>
+        </section>
+        <section>
+            <h2 id="city-name"></h2>
+            <div id="current-weather">
+                <img id="weather-icon" alt="Weather Icon" />
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
             </div>
-            <button type="button" id="search-button" class="btn btn-primary">Search</button>
-        </form>
-        <div id="weather-display"></div>
-        <div id="search-history"></div>
-    </div>
+        </section>
+        <section>
+            <h2>5-Day Forecast:</h2>
+            <div id="forecast-container">
+                <div class="forecast-card" id="forecast-card-0">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-1">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-2">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-3">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-4">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <h2>Search History:</h2>
+            <ul id="search-history"></ul>
+        </aside>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
