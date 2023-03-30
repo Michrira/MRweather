@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <form>
+            <div class="form-group">
+                <label for="city-input">Enter a City:</label>
+                <input type="text" class="form-control" id="city-input" />
+            </div>
+            <button type="button" id="search-button" class="btn btn-primary">Search</button>
+        </form>
+        <div id="weather-display"></div>
+        <div id="search-history"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
