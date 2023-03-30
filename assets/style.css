@@ -9,6 +9,23 @@ header {
     text-align: center;
 }
 
+/* Trying to hide everything except the search bar */
+/* Hide elements by default */
+/*  #city-name,
+#current-weather,
+#forecast-container,
+aside {
+display: none;
+} 
+ */
+/* Show elements when search button is clicked */
+/*  #search-button:checked ~ #city-name,
+#search-button:checked ~ #current-weather,
+#search-button:checked ~ #forecast-container,
+#search-button:checked ~ aside {
+display: block;
+}
+ */
 /* Global styles */
 * {
     margin: 0;

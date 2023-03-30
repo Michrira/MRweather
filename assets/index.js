@@ -3,6 +3,11 @@ var apiKey = "df013db2b69272b1774351d54b370620";
 var cityInput = document.querySelector("#city-input");
 var searchButton = document.querySelector("#search-button");
 var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+var cityName = document.querySelector('#city-name');
+var currentWeather = document.querySelector('#current-weather');
+var forecastContainer = document.querySelector('#forecast-container');
+var aside = document.querySelector('aside');
+
 
 // Event listener for search button
 searchButton.addEventListener("click", function () {
@@ -10,6 +15,22 @@ searchButton.addEventListener("click", function () {
     if (city) {
         getWeatherData(city);
         cityInput.value = "";
+    }
+});
+
+// Event listener for toggle button
+const toggleButton = document.querySelector('#toggle-button');
+toggleButton.addEventListener('click', function() {
+    if (toggleButton.checked) {
+        cityName.style.display = 'block';
+        currentWeather.style.display = 'block';
+        forecastContainer.style.display = 'block';
+        aside.style.display = 'block';
+    } else {
+        cityName.style.display = 'none';
+        currentWeather.style.display = 'none';
+        forecastContainer.style.display = 'none';
+        aside.style.display = 'none';
     }
 });
 
