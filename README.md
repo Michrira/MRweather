@@ -8,7 +8,7 @@ This is my MVP for a 5 day weather forecaster.
 
 ## Description 
 
-This is my first attempt at making a scheduler and I wrote the HTML, CSS and Javascript with the help of my Discord study group. To use the forecaster, simply click on the search bar and enter a city name then click "search" The website will generate the forecast for the next 5 days with weather icons and the temperature, humidity and wind speed being displayed. There is also a search history stored at the bottom. 
+This is my first attempt at making a weather forcaster and I wrote the HTML, CSS and Javascript with the help of my Discord study group. To use the forecaster, simply click on the search bar and enter a city name then click "search" The website will generate the forecast for the next 5 days with weather icons and the temperature, humidity and wind speed being displayed. There is also a search history stored at the bottom. 
 
 (This was a homework assignment that I took on to challenge myself as I am learning to code. Through this assignment, I have furthered my understanding of JavaScript, CSS, HTML and learning how to code in general.)
 
