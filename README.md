@@ -40,6 +40,6 @@ This is a snippet of how the webpage should look and operate
 
 ## Deployed area link:
 
-https://michrira.github.io/MRWDScheduler/
+https://michrira.github.io/MRweather/
 
-https://github.com/Michrira/MRWDScheduler.git
+https://github.com/Michrira/MRweather.git
